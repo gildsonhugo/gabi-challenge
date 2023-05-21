@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="boxogame">
+    <div class="sections">
+        <section id="start">
+            <img src="img/heart.png" class="heart-start">
+            <img src="img/logo.png">
+            <div class="button-group">
+                <button class="btn btn-action" id="btn-start">Começar!</button>
+                <button class="btn btn-action" id="btn-instructions">Instruções</button>
+            </div>
+        </section>
+        <section id="instructions-block">
+            <section id="instructions"></section>
+            <section id="instructions-controls">
+                <button class="btn btn-action" style="display: none;" id="btn-next-instruction">></button>
+                <button class="btn btn-action" style="display: none;" id="btn-start-game">Começar!</button>
+            </section>
+        </section>
+        <div id="game-over">
+            <h2>Game Over :(</h2>
+            <p>Suas forças acabaram. Pressione R para reiniciar o jogo</p>
+        </div>
+        <div id="won">
+
+        </div>
+    </div>
+    <div id="indicators">
+        <div id="gabi-inds">
+            <div id="energyLevel">
+                <img src="./img/lightning.png">
+                <div class="indicator"></div>
+            </div>
+            <div id="strengthLevel">
+                <img src="./img/dumbel.png">
+                <div class="indicator"></div>
+            </div>
+        </div>
+        <div id="loveHugo">
+            <img src="./img/hugo-ind.png">
+            <div class="indicator"></div>
+        </div>
+    </div>
+    <canvas width="700" height="700" id="mainCanvas"></canvas>
+    <div id="chao"></div>
+</div>
+<script src="./js/script.js" type="module"></script>
+</body>
+</html>
