@@ -419,12 +419,11 @@ function getTagFromString(str, indexStartTag){
     let finalIndexTag = -1;
     for(let i=indexStartTag; i <= str.length; i++){
         if(str.charAt(i) == '>'){
-            console.log(i);
             finalIndexTag = i;
             break;
         }
     }
-    return { str: str.substr(indexStartTag, finalIndexTag), endIndex: finalIndexTag }
+    return { str: /<(.*?)>/g.exec(str.substr(indexStartTag, finalIndexTag))[0], endIndex: finalIndexTag }
 }
 
 hideSections();
